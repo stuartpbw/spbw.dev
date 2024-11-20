@@ -1,4 +1,6 @@
 ---
+import "@fontsource-variable/inter";
+
 interface Props {
   title: string;
   description: string;
@@ -8,7 +10,7 @@ interface Props {
 const { title, description, debug = false } = Astro.props;
 ---
 
-<html lang="en">
+<html class="font-body" lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
