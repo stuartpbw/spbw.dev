@@ -1,0 +1,58 @@
+---
+import { getCollection } from "astro:content";
+
+import Layout from "../../layouts/Layout.astro";
+
+const allArticles = await getCollection("articles");
+---
+
+<Layout title="Latest Articles" description="Latest articles by SPBW">
+  <header class="px-6">
+    <div class="h-28 grid container items-center">
+      <a class="font-semibold text-lg" href="/" title="Go Home">spbw.dev</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="px-6 py-40">
+      <div class="container">
+        <h1 class="font-semibold text-3xl mb-4">Latest Articles</h1>
+        <p class="max-w-xl">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+          inventore possimus. Similique excepturi facilis, voluptas voluptatem,
+          ad aliquid ipsum quas autem nemo, delectus quo?
+        </p>
+      </div>
+    </section>
+
+    <section class="px-6 py-24">
+      <div class="container">
+        <h2 class="font-semibold text-2xl mb-6">Articles</h2>
+        <ul class="grid gap-6 lg:grid-cols-2">
+          {
+            allArticles.map((article: any) => (
+              <li>
+                <a href={`/articles/${article.slug}`}>
+                  <article class="bg-white border p-8">
+                    <h3 class="font-semibold text-lg mb-2">
+                      {article.data.title}
+                    </h3>
+                    <p>{article.data.description}</p>
+                  </article>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-6 py-12">
+    <div class="container">
+      <p class="text-sm text-center">
+        &copy; {new Date().getFullYear()} spbw
+      </p>
+    </div>
+  </footer>
+</Layout>
