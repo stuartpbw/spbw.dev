@@ -3,16 +3,18 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="spbw.dev" description="Web Development & Design">
-  <header class="bg-white border-b px-6">
+  <header class="px-6">
     <div class="h-28 grid container items-center">
-      <a class="font-bold text-lg" href="/" title="Go Home">spbw.dev</a>
+      <a class="font-semibold text-lg" href="/" title="Go Home">spbw.dev</a>
     </div>
   </header>
 
   <main>
-    <section class="bg-black text-white px-6 py-40">
+    <section class="px-6 py-40">
       <div class="container">
-        <h1 class="font-bold text-3xl mb-4">Modern Web Design & Development</h1>
+        <h1 class="font-semibold text-3xl mb-4">
+          Modern Web Design & Development
+        </h1>
         <p class="max-w-xl">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
           inventore possimus. Similique excepturi facilis, voluptas voluptatem,
@@ -21,15 +23,15 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
 
-    <section class="bg-gray-50 px-6 py-24">
+    <section class="px-6 py-24">
       <div class="container">
-        <h2 class="font-bold text-2xl mb-6">Prototypes</h2>
+        <h2 class="font-semibold text-2xl mb-6">Prototypes</h2>
         <ul class="grid gap-6 lg:grid-cols-2">
           {
             [0, 1, 2, 3, 4].map((x) => (
               <li>
                 <article class="bg-white border p-8">
-                  <h3 class="font-bold text-lg mb-2">
+                  <h3 class="font-semibold text-lg mb-2">
                     Article heading lorem ipsum sit amet dolor
                   </h3>
                   <p>
@@ -47,10 +49,10 @@ import Layout from "../layouts/Layout.astro";
     </section>
   </main>
 
-  <footer class="px-6 py-12 border-t">
+  <footer class="px-6 py-12">
     <div class="container">
-      <p class="text-center">
-        &copy; {new Date().getFullYear()} SPBW
+      <p class="text-sm text-center">
+        &copy; {new Date().getFullYear()} spbw
       </p>
     </div>
   </footer>
