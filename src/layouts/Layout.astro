@@ -2,9 +2,10 @@
 interface Props {
   title: string;
   description: string;
+  debug?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, debug = false } = Astro.props;
 ---
 
 <html lang="en">
@@ -16,7 +17,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class:list={{ debug }}>
     <slot />
   </body>
 </html>
