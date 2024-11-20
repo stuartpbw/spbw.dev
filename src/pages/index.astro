@@ -1,5 +1,9 @@
 ---
+import { getCollection } from "astro:content";
+
 import Layout from "../layouts/Layout.astro";
+
+const allArticles = await getCollection("articles");
 ---
 
 <Layout title="spbw.dev" description="Web Development & Design">
@@ -25,22 +29,19 @@ import Layout from "../layouts/Layout.astro";
 
     <section class="px-6 py-24">
       <div class="container">
-        <h2 class="font-semibold text-2xl mb-6">Prototypes</h2>
+        <h2 class="font-semibold text-2xl mb-6">Latest Articles</h2>
         <ul class="grid gap-6 lg:grid-cols-2">
           {
-            [0, 1, 2, 3, 4].map((x) => (
+            allArticles.map((article: any) => (
               <li>
-                <article class="bg-white border p-8">
-                  <h3 class="font-semibold text-lg mb-2">
-                    Article heading lorem ipsum sit amet dolor
-                  </h3>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Blanditiis, quasi consectetur. Quidem cum labore modi
-                    pariatur! Animi modi vitae libero enim repellat consectetur
-                    neque.
-                  </p>
-                </article>
+                <a href={`/articles/${article.slug}/`}>
+                  <article class="bg-white border p-8">
+                    <h3 class="font-semibold text-lg mb-2">
+                      {article.data.title}
+                    </h3>
+                    <p>{article.data.description}</p>
+                  </article>
+                </a>
               </li>
             ))
           }

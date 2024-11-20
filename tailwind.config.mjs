@@ -20,6 +20,8 @@ export default {
   },
   corePlugins: { container: false },
   plugins: [
+    require("@tailwindcss/typography"),
+
     function ({ addBase, addComponents, addUtilities }) {
       addBase({
         ":root": {
