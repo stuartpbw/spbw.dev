@@ -15,32 +15,16 @@ const { Content } = await entry.render();
 ---
 
 <Layout title="Test" description="Test">
-  <header class="px-6">
-    <div class="h-28 grid container items-center">
-      <a class="font-semibold text-lg" href="/" title="Go Home">spbw.dev</a>
-    </div>
-  </header>
-
-  <main>
-    <section class="px-6 py-24">
-      <div class="container">
-        <div class="prose">
-          <img
-            src={entry.data.image.url}
-            title={entry.data.image.alt}
-            alt={entry.data.image.alt}
-          />
-          <Content />
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="px-6 py-12">
+  <section class="px-6 py-24">
     <div class="container">
-      <p class="text-sm text-center">
-        &copy; {new Date().getFullYear()} spbw
-      </p>
+      <div class="prose">
+        <img
+          src={entry.data.image.url}
+          title={entry.data.image.alt}
+          alt={entry.data.image.alt}
+        />
+        <Content />
+      </div>
     </div>
-  </footer>
+  </section>
 </Layout>

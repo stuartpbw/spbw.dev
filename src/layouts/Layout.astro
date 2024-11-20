@@ -1,6 +1,9 @@
 ---
 import "@fontsource-variable/inter";
 
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
 interface Props {
   title: string;
   description: string;
@@ -20,6 +23,12 @@ const { title, description, debug = false } = Astro.props;
     <title>{title}</title>
   </head>
   <body class:list={{ debug }}>
-    <slot />
+    <Header />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
   </body>
 </html>
