@@ -15,16 +15,38 @@ const { Content } = await entry.render();
 ---
 
 <Layout title="Test" description="Test">
-  <section class="px-6 py-24">
-    <div class="container">
-      <div class="prose">
-        <img
-          src={entry.data.image.url}
-          title={entry.data.image.alt}
-          alt={entry.data.image.alt}
-        />
+  <article>
+    <header class="px-6 py-40">
+      <div class="container">
+        <div class="prose">
+          <h1>{entry.data.title}</h1>
+          <p class="lead">{entry.data.description}</p>
+          <p>
+            Published on
+            <time datetime={entry.data.pubDate.toString()}
+              >{entry.data.pubDate.toLocaleDateString()}</time
+            > by <a href="#todo">{entry.data.author}</a>
+          </p>
+          <ul class="not-prose text-sm flex flex-wrap gap-2">
+            <li>Tagged in:</li>
+            {
+              entry.data.tags.map((tag) => (
+                <li>
+                  <a class="underline text-blue-500" href="#todo">
+                    {tag}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section class="px-6 py-24">
+      <div class="prose mx-auto">
         <Content />
       </div>
-    </div>
-  </section>
+    </section>
+  </article>
 </Layout>

@@ -1,7 +1,7 @@
 ---
-title: "Article 002"
+title: "Article 001 Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit"
 pubDate: 2024-11-20
-description: "This is the second article."
+description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, inventore possimus. Similique excepturi facilis, voluptas voluptatem, ad aliquid ipsum quas autem nemo, delectus quo."
 author: "Stuart Williams"
 image:
   url: "https://placehold.co/1600x900.jpg"

@@ -1,19 +1,13 @@
 ---
-title: "Article 001"
+title: "Article 001 Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit"
 pubDate: 2024-11-20
-description: "This is the first article."
+description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, inventore possimus. Similique excepturi facilis, voluptas voluptatem, ad aliquid ipsum quas autem nemo, delectus quo."
 author: "Stuart Williams"
 image:
   url: "https://placehold.co/1600x900.jpg"
   alt: "Placeholder image goes here lorem ipusm"
 tags: ["astro", "blogging", "learning in public"]
 ---
-
-# My First Blog Post
-
-Published on: 2022-07-01
-
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
 
 ## What I've accomplished
 
